@@ -4,9 +4,8 @@ return {
   opts = {
     ---@type lspconfig.options
     servers = {
-      -- add pylsp to lspconfig
-      -- python lsp server will be automatically installed with mason and loaded with lspconfig
-      pylsp = {},
+      -- add some lsp to lspconfig
+      basedpyright = {},
     },
   },
 }
