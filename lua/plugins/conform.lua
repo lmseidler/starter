@@ -10,6 +10,7 @@ return {
     formatters_by_ft = {
       python = { "black" },
       fortran = { "fprettify" },
+      json = { "prettier" },
     },
   },
 }
