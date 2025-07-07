@@ -30,3 +30,6 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 -- delete to void
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("v", "<leader>d", '"_d')
+
+-- open CodeCompanionChat
+vim.keymap.set("n", "<leader>cL", ":CodeCompanionChat<CR>")
