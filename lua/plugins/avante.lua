@@ -73,7 +73,7 @@ return {
         },
       },
       copilot = {
-        model = "gpt-4.1",
+        model = "gemini-2.5-pro",
       },
     },
     ---Specify the special dual_boost mode
