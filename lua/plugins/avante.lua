@@ -73,7 +73,7 @@ return {
         },
       },
       copilot = {
-        model = "o4-mini",
+        model = "gemini-2.5-pro",
       },
     },
     ---Specify the special dual_boost mode
