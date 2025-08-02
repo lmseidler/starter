@@ -73,7 +73,7 @@ return {
         },
       },
       copilot = {
-        model = "gemini-2.5-pro",
+        model = "claude-sonnet-4",
       },
     },
     ---Specify the special dual_boost mode
