@@ -55,7 +55,7 @@ return {
   opts = {
     ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
     ---@type Provider
-    provider = "copilot", -- The provider used in Aider mode or in the planning phase of Cursor Planning Mode
+    provider = "openrouter", -- The provider used in Aider mode or in the planning phase of Cursor Planning Mode
     ---@alias Mode "agentic" | "legacy"
     ---@type Mode
     mode = "agentic", -- The default mode for interaction. "agentic" uses tools to automatically generate code, "legacy" uses the old planning method to generate code.
@@ -73,8 +73,21 @@ return {
         },
       },
       copilot = {
-        model = "claude-sonnet-4",
+        -- model = "claude-sonnet-4",
+        model = "gpt-4.1",
+        timeout = 30000,
       },
+      -- openrouter = {
+      --   __inherited_from = "openai", -- 🔑 This is crucial!
+      --   api_key_name = "OPENROUTER_API_KEY", -- Environment variable name
+      --   endpoint = "https://openrouter.ai/api/v1",
+      --   model = "moonshotai/kimi-k2",
+      --   timeout = 30000,
+      --   extra_request_body = {
+      --     temperature = 0.7,
+      --     max_tokens = 4096,
+      --   },
+      -- },
     },
     ---Specify the special dual_boost mode
     ---1. enabled: Whether to enable dual_boost mode. Default to false.
