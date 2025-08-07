@@ -1,4 +1,4 @@
--- return {
+return {}
 --   "yetone/avante.nvim",
 --   dependencies = {
 --     "nvim-lua/plenary.nvim",
