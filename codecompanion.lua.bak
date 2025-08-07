@@ -1,0 +1,51 @@
+return {
+  "olimorris/codecompanion.nvim",
+  opts = {
+    adapters = {
+      openrouter = function()
+        return require("codecompanion.adapters").extend("openai_compatible", {
+          -- Environment variables – you can store the key in plain text or fetch it via a command
+          env = {
+            url = "https://openrouter.ai/api",
+            api_key = "OPENROUTER_API_KEY",
+            chat_url = "/v1/chat/completions",
+          },
+          -- 2️⃣ Adjust the schema to expose the settings you care about
+          schema = {
+            model = {
+              -- Choose a default OpenRouter model – see https://openrouter.ai/models
+              default = "qwen/qwen3-coder",
+            },
+            -- temperature = {
+            --   default = 0.7,
+            -- },
+            -- max_completion_tokens = {
+            --   default = 4096,
+            -- },
+          },
+        })
+      end,
+    },
+
+    -- 3️⃣ Set the default adapter for the different strategies (optional but handy)
+    strategies = {
+      chat = {
+        adapter = "openrouter", -- use OpenRouter for the chat buffer
+      },
+      inline = {
+        adapter = "openrouter", -- use OpenRouter for inline completions
+      },
+      cmd = {
+        adapter = "openrouter", -- use OpenRouter for the :CodeCompanion command
+      },
+    },
+  },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    {
+      "MeanderingProgrammer/render-markdown.nvim",
+      ft = { "markdown", "codecompanion" },
+    },
+  },
+}
