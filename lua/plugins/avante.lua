@@ -86,7 +86,6 @@ return {
         timeout = 30000,
         extra_request_body = {
           temperature = 0.7,
-          max_tokens = 4096,
         },
       },
     },
