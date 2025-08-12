@@ -81,8 +81,7 @@ return {
         __inherited_from = "openai", -- 🔑 This is crucial!
         api_key_name = "OPENROUTER_API_KEY", -- Environment variable name
         endpoint = "https://openrouter.ai/api/v1",
-        -- model = "moonshotai/kimi-k2",
-        model = "openai/o4-mini-high",
+        model = "qwen/qwen3-coder",
         timeout = 30000,
         extra_request_body = {
           temperature = 0.7,
