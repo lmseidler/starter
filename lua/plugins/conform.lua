@@ -4,7 +4,15 @@ return {
   opts = {
     formatters = {
       fprettify = {
-        args = { "--indent", "3" },
+        args = {
+          "--indent",
+          "3",
+          "--whitespace-multdiv",
+          "True",
+          "--disable-indent",
+          "--whitespace-intrinsics",
+          "False",
+        },
       },
     },
     formatters_by_ft = {
