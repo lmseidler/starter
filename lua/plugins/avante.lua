@@ -74,7 +74,7 @@ return {
       },
       openrouter = {
         __inherited_from = "openai", -- 🔑 This is crucial!
-        api_key_name = "OPENROUTER_API_KEY", -- Environment variable name
+        api_key_name = "cmd:bw get notes 'openrouter api key avante'",
         endpoint = "https://openrouter.ai/api/v1",
         model = "x-ai/grok-code-fast-1",
         timeout = 30000,
