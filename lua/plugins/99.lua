@@ -10,7 +10,8 @@ return {
     local basename = vim.fs.basename(cwd)
     _99.setup({
       provider = _99.Providers.OpenCodeProvider, -- default: OpenCodeProvider
-      model = "github-copilot/gemini-3-flash-preview",
+      -- model = "github-copilot/gemini-3-flash-preview",
+      model = "openrouter/xiaomi/mimo-v2-flash",
       -- logger = {
       --   level = _99.DEBUG,
       --   path = "/tmp/" .. basename .. ".99.debug",
