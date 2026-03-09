@@ -22,16 +22,16 @@ return {
         -- Command agent for code edits with Gemini 2.5 Flash
         {
           provider = "openrouter",
-          name = "Gemini-Flash",
+          name = "code",
           chat = false,
           command = true,
-          model = { model = "google/gemini-3-flash-preview", temperature = 0.7 },
+          model = { model = "anthropic/claude-sonnet-4.6", temperature = 0.7 },
           system_prompt = require("gp.defaults").code_system_prompt,
         },
       },
 
       -- Set as default agents
-      default_command_agent = "Gemini-Flash-Code",
+      default_command_agent = "code",
     }
 
     require("gp").setup(conf)
