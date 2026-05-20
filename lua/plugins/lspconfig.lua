@@ -4,6 +4,7 @@ return {
   opts = {
     ---@type lspconfig.options
     servers = {
+      copilot = { enabled = false },
       -- add some lsp to lspconfig
       basedpyright = {},
     },
