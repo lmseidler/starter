@@ -10,7 +10,7 @@ return {
         override_palette = function(filter)
           local palette = mp.get_palette("octagon")
 
-          palette.background = "#101014"
+          palette.background = "#282c34"
 
           return palette
         end,
