@@ -40,7 +40,7 @@ return {
           return {} -- no completions in comments
         end
 
-        return { "lsp", "path", "codecompanion" } -- no snippets, no buffer
+        return { "lsp", "path", "copilot" } -- no snippets, no buffer
       end,
       providers = {
         copilot = {
