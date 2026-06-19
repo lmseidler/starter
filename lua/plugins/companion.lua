@@ -4,8 +4,14 @@ return {
   opts = {
     interactions = {
       cli = {
-        agent = "opencode",
+        agent = "pi",
         agents = {
+          pi = {
+            cmd = "pi",
+            args = {},
+            description = "Pi CLI",
+            provider = "terminal",
+          },
           opencode = {
             cmd = "opencode",
             args = {},

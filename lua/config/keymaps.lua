@@ -30,3 +30,6 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 -- delete to void
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("v", "<leader>d", '"_d')
+
+-- leave terminal mode without needing Ctrl-\\ (awkward on Bone layout)
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
